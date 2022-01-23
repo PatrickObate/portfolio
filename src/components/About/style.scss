@@ -1,0 +1,38 @@
+.about-section {
+  .first-line {
+    text-align: start;
+    p {
+      font-size: 30px;
+      color: #ffffff;
+      opacity: 0;
+      width: 50%;
+      text-align: start;
+
+      > div {
+        opacity: 0;
+        transform: translate(0);
+      }
+      &.is-reveal {
+        opacity: 1;
+      }
+    }
+  }
+  .second-line {
+    text-align: start;
+    p {
+      font-size: 30px;
+      color: #ffffff;
+      opacity: 0;
+      width: 50%;
+      text-align: start;
+
+      > div {
+        opacity: 0;
+        transform: translate(0);
+      }
+      &.is-reveal {
+        opacity: 1;
+      }
+    }
+  }
+}
