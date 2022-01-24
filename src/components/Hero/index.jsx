@@ -30,7 +30,7 @@ const Hero = () => {
         src={PatPicture}
         className="hero-picture"
         data-scroll
-        alt="Patrick Obate Picture"
+        alt="Patrick Obate face"
       />
     </div>
   );
