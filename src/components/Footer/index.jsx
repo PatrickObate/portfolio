@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className="footer-container" data-scroll-section id="footer">
       <p>connect with me</p>
-      <a className="email-link" href="mailto:patrickpobate@gmail.com">
-        patrickpobate@gmail.com
+      <a className="email-link" href="mailto: contact@patrickobate.com">
+        contact@patrickobate.com
       </a>
       <div className="icon-container">
         <a

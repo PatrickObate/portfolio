@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <p className="nav-link">Patrick Obate</p>
         <p className="nav-link-color">◯</p>
-        <a className="nav-link" href="mailto:patrickpobate@gmail.com">
+        <a className="nav-link" href="mailto: contact@patrickobate.com">
           Contact
         </a>
       </div>
