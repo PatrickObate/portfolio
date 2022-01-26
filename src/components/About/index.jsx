@@ -44,8 +44,8 @@ const About = () => {
       <div className="second-line">
         <SectionHeader title="What do i do?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
-          I mainly design and develop different kind of websites. I use React,
-          Adobe XD, and other various technologies to create and build websites.
+          I mainly design and develop different kinds of websites. I use React,
+          Adobe XD, and other various technologies to create and build apps.
         </p>
       </div>
     </section>
