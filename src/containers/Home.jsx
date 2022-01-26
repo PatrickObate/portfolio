@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   const [preloader, setPreloader] = useState(true);
   useLocoScroll(!preloader);
-  const [timer, setTimer] = useState(2);
+  const [timer, setTimer] = useState(3);
 
   const id = useRef(null);
 
