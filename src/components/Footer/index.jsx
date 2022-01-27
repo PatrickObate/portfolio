@@ -7,7 +7,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className="footer-container" data-scroll-section id="footer">
-      <p>connect with me</p>
+      <p>connect with me:</p>
       <a className="email-link" href="mailto: contact@patrickobate.com">
         contact@patrickobate.com
       </a>
