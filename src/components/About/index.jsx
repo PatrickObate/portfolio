@@ -36,7 +36,7 @@ const About = () => {
       <div className="first-line">
         <SectionHeader title="Who am i?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
-          Hey there! My name is Pat. I am a front-end engineer with a passion
+          Hey there! I'm Pat. A front-end engineer with a passion
           for creating minimalist and creative aesthetics that is suitable for
           everyday web applications.
         </p>
@@ -45,7 +45,7 @@ const About = () => {
         <SectionHeader title="What do i do?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
           I mainly design and develop different kinds of websites. I use React,
-          Adobe XD, and other various technologies to create and build apps.
+          Adobe XD, and other various technologies to create and build web apps.
         </p>
       </div>
     </section>
