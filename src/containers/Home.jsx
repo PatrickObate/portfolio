@@ -1,39 +1,57 @@
 import React, { useState, useRef, useEffect } from "react";
+
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Gallery from "../components/Gallery";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
+import useLocoScroll from "../hooks/useLocoScroll";
 
 import "../styles/home.scss";
-import useLocoScroll from "../hooks/useLocoScroll";
-import Footer from "../components/Footer";
+
 
 const Home = () => {
-  const [preloader, setPreloader] = useState(true);
-  useLocoScroll(!preloader);
-  const [timer, setTimer] = useState(2);
+  const ref = useRef(null);
+  const [preloader, setPreload] = useState(true);
 
-  const id = useRef(null);
+
+  useLocoScroll(!preloader);
+
+  useEffect(() => {
+    if (!preloader && ref) {
+      if (typeof window === "undefined" || !window.document) {
+        return;
+      }
+    }
+  }, [preloader]);
+
+  const [timer, setTimer] = React.useState(3);
+
+  const id = React.useRef(null);
 
   const clear = () => {
     window.clearInterval(id.current);
-    setPreloader(false);
+    setPreload(false);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     id.current = window.setInterval(() => {
-      setTimer((timer) => timer - 1);
+      setTimer((time) => time - 1);
     }, 1000);
+    return () => clear();
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (timer === 0) {
       clear();
     }
   }, [timer]);
 
-  useLocoScroll();
+  if (typeof window === "undefined" || !window.document) {
+    return null;
+  }
+
   return (
     <>
       {preloader ? (
@@ -41,7 +59,12 @@ const Home = () => {
           <h1>Patrick Obate</h1>
         </div>
       ) : (
-        <div id="main-container" data-scroll-container>
+        <div
+        className="main-container"
+          id="main-container"
+          data-scroll-container
+          ref={ref}
+        >
           <Navbar />
           <Hero />
           <About />

@@ -41,7 +41,7 @@ const About = () => {
           everyday web applications.
         </p>
       </div>
-      <div className="second-line">
+      <div className="first-line">
         <SectionHeader title="What do i do?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
           I mainly design and develop different kinds of websites. I use React,

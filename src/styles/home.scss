@@ -8,25 +8,21 @@ $bg-color: #0f0e0e;
 body {
   font-family: "Poppins", sans-serif;
   background-color: $bg-color;
-  box-sizing: border-box;
-  margin: 0;
+}
+
+.main-container {
   padding: 0;
 }
 
 section {
-  padding: 100px 7.5vw 100px;
+  padding: 100px ;
+  .section-header {
+    margin-bottom: 50px;
+  }
 }
 
-footer {
-  padding: 100px 7.5vw 170px;
-}
 
-.main-container {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
+
 
 .loader-wrapper {
   display: flex;

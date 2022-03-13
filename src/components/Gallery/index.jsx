@@ -37,7 +37,7 @@ function GalleryItem({
   const ref = useRef(null);
 
   const onScreen = useOnScreen(ref, 0.5);
-
+  
   useEffect(() => {
     if (onScreen) {
       updateActiveImage(index);
@@ -70,8 +70,9 @@ function GalleryItem({
   );
 }
 
-const Gallery = () => {
+const Gallery = ({ src, index, columnOffset }) => {
   const [activeImage, setActiveImage] = useState(1);
+
   const ref = useRef(null);
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const Gallery = () => {
       console.log({ current: ref.current });
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
 
-      gsap.to(sections, {
+       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
@@ -111,7 +112,7 @@ const Gallery = () => {
         </div>
         {images.map((image, index) => (
           <GalleryItem
-            key={image.src}
+            key={src}
             index={index}
             {...image}
             updateActiveImage={handleUpdateActiveImage}

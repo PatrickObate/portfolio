@@ -1,16 +1,11 @@
 .header-container {
   position: relative;
-  width: 100%;
-  height: 100vh;
   display: grid;
   grid-template-columns: 54% 22% 24%;
-
+  width: 100%;
+  height: 100vh;
   grid-template-rows: 20% 44% 26% 10%;
   font-family: "Montserrat", sans-serif;
-
-  @media screen and (max-width: 980px) {
-    height: 50vh;
-  }
 
   img {
     clip-path: inset(100% 0% 0% 0%);
@@ -38,7 +33,7 @@
   .hero-picture {
     grid-column: 2/4;
     grid-row: 2/4;
-    width: 27.03125vw;
+    width: 23.03125vw;
   }
 }
 
