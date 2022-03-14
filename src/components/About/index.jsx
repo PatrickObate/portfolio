@@ -33,16 +33,16 @@ const About = () => {
 
   return (
     <section className={cn("about-section")} data-scroll-section>
+      <SectionHeader title="Who am I?" />
       <div className="first-line">
-        <SectionHeader title="Who am I?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
           Hey there! I'm Pat. A front-end engineer with a passion
           for creating minimalist and creative aesthetics that is suitable for
           everyday web applications.
         </p>
       </div>
+      <SectionHeader title="What do I do?" />
       <div className="first-line">
-        <SectionHeader title="What do I do?" />
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
           I mainly design and develop different kinds of websites. I use React,
           Adobe XD, and other various technologies to create and build web apps.

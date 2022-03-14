@@ -10,15 +10,14 @@ body {
   background-color: $bg-color;
 }
 
-.main-container {
-  padding: 0;
-}
 
 section {
-  padding: 0;
 
   .section-header {
     padding-bottom: 50px;
+    @media screen and (max-width: 690px) {
+      padding-bottom: 30px;
+    }
   }
 }
 

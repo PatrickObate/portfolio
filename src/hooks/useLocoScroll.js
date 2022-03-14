@@ -16,7 +16,7 @@ export default function useLocoScroll(start) {
     locoScroll = new LocomotiveScroll({
       el: scrollEl,
       smooth: true,
-      multiplier: 0.98,
+      multiplier: 1.9,
       class: "is-reveal",
     });
 

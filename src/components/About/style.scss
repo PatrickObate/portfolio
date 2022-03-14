@@ -10,10 +10,11 @@
     @media screen and (max-width: 690px) {
       padding: 10px 0px 10px 0px;
     }
+
     text-align: start;
     p {
       font-size: 1.5625vw;
-      line-height: 37px;
+      line-height: 57px;
       color: #ffffff;
       opacity: 0;
       width: 50%;
@@ -22,6 +23,7 @@
       @media screen and (max-width: 980px) {
         font-size: 25px;
         width: 75%;
+        line-height: 21px;
       }
 
       @media screen and (max-width: 690px) {

@@ -37,7 +37,7 @@ function GalleryItem({
   const ref = useRef(null);
 
   const onScreen = useOnScreen(ref, 0.5);
-  
+
   useEffect(() => {
     if (onScreen) {
       updateActiveImage(index);
@@ -53,7 +53,7 @@ function GalleryItem({
       rel="noopener noreferrer"
       style={{ cursor: "default" }}
     >
-      <div className={'zero-fit'}/>
+      <div></div>
       <div className={"gallery-item"} style={{ cursor: "pointer" }}>
         <div className="gallery-item-info">
           <h1 className="gallery-info-title">{title}</h1>
@@ -65,7 +65,7 @@ function GalleryItem({
           style={{ backgroundImage: `url(${src})`, cursor: "pointer" }}
         ></div>
       </div>
-      <div className={'zero-fit'}/>
+      <div></div>
     </a>
   );
 }
@@ -83,7 +83,7 @@ const Gallery = ({ src, index, columnOffset }) => {
       console.log({ current: ref.current });
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
 
-       gsap.to(sections, {
+      gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
@@ -105,21 +105,71 @@ const Gallery = ({ src, index, columnOffset }) => {
   };
 
   return (
-    <section data-scroll-section className="section-wrapper gallery-wrap">
-      <div className="gallery" ref={ref} id="projects">
-        <div className="gallery-counter">
-          <span>.0000{activeImage}</span>
+    <>
+      <section data-scroll-section className="section-wrapper gallery-wrap">
+        <div className="gallery" ref={ref} id="projects">
+          <div className="gallery-counter">
+            <span>.0000{activeImage}</span>
+          </div>
+          {images.map((image, index) => (
+            <GalleryItem
+              key={src}
+              index={index}
+              {...image}
+              updateActiveImage={handleUpdateActiveImage}
+            />
+          ))}
         </div>
-        {images.map((image, index) => (
-          <GalleryItem
-            key={src}
-            index={index}
-            {...image}
-            updateActiveImage={handleUpdateActiveImage}
+      </section>
+      <section
+        data-scroll-section
+        className="section-wrapper gallery-wrap-mobile"
+      >
+        <a
+          href={`https://xd.adobe.com/view/ae3cbba5-a2a7-4788-b33e-df26a1f9df13-fb6f/`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: "default" }}
+        >
+          <div className="mobile-gallery-counter">.00001</div>
+          <img
+            className="mobile-item-image"
+            src={Meraki}
+            alt="meraki"
+            data-scroll
           />
-        ))}
-      </div>
-    </section>
+          <div className="mobile-item-info">
+            <div className="mobile-info-title">MERAKI</div>
+            <div className="mobile-info-subtitle">2021</div>
+            <div className="mobile-info-category">UX/UI Design</div>
+          </div>
+        </a>
+      </section>
+      <section
+        data-scroll-section
+        className="section-wrapper gallery-wrap-mobile"
+      >
+        <a
+          href={`https://pyongbbu.com/`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: "default" }}
+        >
+          <div className="mobile-gallery-counter">.00002</div>
+          <img
+            className="mobile-item-image"
+            src={Pyongbbu}
+            alt="Pyongbbu"
+            data-scroll
+          />
+          <div className="mobile-item-info">
+            <div className="mobile-info-title">PYONGBBU</div>
+            <div className="mobile-info-subtitle">2022</div>
+            <div className="mobile-info-category">React Ecommerce Website</div>
+          </div>
+        </a>
+      </section>
+    </>
   );
 };
 

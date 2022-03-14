@@ -2,6 +2,9 @@
   background-color: gray;
   margin-left: -5vw;
   margin-right: -5vw;
+  @media screen and (max-width: 980px) {
+    display: none;
+  }
 }
 
 .gallery-counter {
@@ -61,9 +64,10 @@
       font-family: "Bai Jamjuree";
       font-weight: 600;
       font-size: 6vw;
-      color: white;
+      color: transparent;
       margin: 0;
-      mix-blend-mode: difference;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 2px #0f0e0e;
     }
 
     .gallery-info-category {
@@ -107,5 +111,97 @@
 .zero-fit {
   @media screen and (max-width: 980px) {
     width: 0;
-   }
+  }
+}
+
+.gallery-wrap-mobile {
+  display: block;
+  position: relative;
+  padding: 100px 7.5vw 100px;
+  background-color: gray;
+  @media screen and (min-width: 981px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 690px) {
+    padding: 50px 7.5vw 50px;
+  }
+
+  img {
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 2s cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.is-reveal {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+  }
+
+  .mobile-item-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mobile-gallery-counter {
+    mix-blend-mode: difference;
+    color: #dbd8d6;
+    font-family: "Bai Jamjuree";
+    font-weight: 600;
+    font-size: 35px;
+    position: absolute;
+    z-index: 2;
+    top: 82px;
+    left: 90px;
+
+    @media screen and (max-width: 690px) {
+      font-size: 18px;
+      top: 41px;
+      left: 41px;
+    }
+  }
+
+  .mobile-item-info {
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    left: 20px;
+
+    .mobile-info-title {
+      font-family: "Bai Jamjuree";
+      font-weight: 600;
+      margin: 0;
+      font-size: 70px;
+      -webkit-font-smoothing: antialiased;
+      mix-blend-mode: difference;
+      color: black;
+      @media screen and (max-width: 690px) {
+        font-size: 32px;
+      }
+    }
+    .mobile-info-subtitle {
+      position: relative;
+      font-family: "Bai Jamjuree";
+      font-weight: 600;
+      font-size: 50px;
+      color: transparent;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 2px #0f0e0e;
+      @media screen and (max-width: 690px) {
+        font-size: 26px;
+        -webkit-text-stroke: 1px #0f0e0e;
+      }
+    }
+    .mobile-info-category {
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: #0f0e0e;
+      font-size: 24px;
+      -webkit-font-smoothing: antialiased;
+      mix-blend-mode: difference;
+      @media screen and (max-width: 690px) {
+        font-size: 13px;
+      }
+    }
+  }
 }

@@ -60,7 +60,6 @@ const Home = () => {
         </div>
       ) : (
         <div
-        className="main-container"
           id="main-container"
           data-scroll-container
           ref={ref}
