@@ -34,7 +34,7 @@ const Skill = () => {
   return (
     <section className={cn("about-section")} data-scroll-section>
       <SectionHeader title="my skills?" />
-      <div className="first-line">
+      <div className="skills-line">
         <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
           HTML, CSS, SASS, SCSS, JAVASCRIPT, STYLED-COMPONENTS, REACT,
           BOOTSTRAP, GSAP, LOTTIE, ADOBE-XD, PHOTOSHOP, MONGODB, NODE, EXPRESS,

@@ -12,6 +12,10 @@ body {
 
 
 section {
+  padding: 100px 7.5vw 100px;
+  @media screen and (max-width: 690px) {
+    padding: 20px 7.5vw 20px;
+  }
 
   .section-header {
     padding-bottom: 50px;
