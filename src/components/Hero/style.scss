@@ -7,6 +7,14 @@
   grid-template-rows: 20% 44% 26% 10%;
   font-family: "Montserrat", sans-serif;
 
+  @media screen and (max-width: 980px) {
+    height: 60vh;
+  }
+  @media screen and (max-width: 690px) {
+    height: 60vh;
+    grid-template-columns: 47% 33% 30%;
+  }
+
   img {
     clip-path: inset(100% 0% 0% 0%);
     transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
@@ -28,12 +36,24 @@
     @media screen and (max-width: 980px) {
       font-size: 50px;
     }
+    @media screen and (max-width: 690px) {
+      font-size: 25px;
+    }
   }
 
   .hero-picture {
     grid-column: 2/4;
     grid-row: 2/4;
     width: 23.03125vw;
+
+    @media screen and (max-width: 980px) {
+      width: 210px;
+      padding-top: 30px;
+    }
+    @media screen and (max-width: 690px) {
+      width: 180px;
+      padding-top: 0;
+    }
   }
 }
 

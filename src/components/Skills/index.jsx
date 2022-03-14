@@ -33,7 +33,7 @@ const Skill = () => {
 
   return (
     <section className={cn("skills-section")} data-scroll-section>
-      <SectionHeader title="my skills?" />
+      <SectionHeader className={"section-header"} title="my skills?" />
       <p id="headline" className={cn({ "is-reveal": reveal })} ref={ref}>
         HTML, CSS, SASS, SCSS, JAVASCRIPT, STYLED-COMPONENTS, REACT, BOOTSTRAP,
         GSAP, LOTTIE, ADOBE-XD, PHOTOSHOP, MONGODB, NODE, EXPRESS, VIDEO-EDITING

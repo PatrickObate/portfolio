@@ -15,9 +15,13 @@ body {
 }
 
 section {
-  padding: 100px ;
+  padding: 0;
+
   .section-header {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    @media screen and (max-width: 690px) {
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -37,6 +41,13 @@ section {
     text-transform: uppercase;
     font-family: "Bai Jamjuree";
     font-weight: 600;
+
+    @media screen and (max-width: 980px) {
+     font-size: 40px;
+    }
+    @media screen and (max-width: 690px) {
+     font-size: 20px;
+    }
   }
 }
 

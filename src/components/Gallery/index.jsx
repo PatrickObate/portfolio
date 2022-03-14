@@ -42,7 +42,7 @@ function GalleryItem({
     if (onScreen) {
       updateActiveImage(index);
     }
-  }, [onScreen, index]);
+  }, [onScreen, index, updateActiveImage]);
 
   return (
     <a
@@ -53,7 +53,7 @@ function GalleryItem({
       rel="noopener noreferrer"
       style={{ cursor: "default" }}
     >
-      <div />
+      <div className={'zero-fit'}/>
       <div className={"gallery-item"} style={{ cursor: "pointer" }}>
         <div className="gallery-item-info">
           <h1 className="gallery-info-title">{title}</h1>
@@ -65,7 +65,7 @@ function GalleryItem({
           style={{ backgroundImage: `url(${src})`, cursor: "pointer" }}
         ></div>
       </div>
-      <div />
+      <div className={'zero-fit'}/>
     </a>
   );
 }
